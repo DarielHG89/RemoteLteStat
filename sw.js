@@ -4,8 +4,7 @@ const assets = [
   '/index.html',
   '/style.css',
   '/script.js',
-  '/jquery.min.js',
-  // Agrega aquí cualquier otro archivo estático
+  '/jquery.min.js'
 ];
 
 self.addEventListener('install', event => {
