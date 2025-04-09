@@ -1,8 +1,9 @@
 // URLs para las solicitudes JSON
-var url = "UsoDatos.json";
-var url1 = "SignalStats.json";
-var url1a = "Radiobaseslte";
-var url2 = "GetQueue.php";
+var burl = "http://192.168.43.1:8080/"
+var url = burl + "UsoDatos.json";
+var url1 = burl + "SignalStats.json";
+var url1a = burl + "Radiobaseslte";
+var url2 = burl + "GetQueue.php";
 var old_value;
 
 // Función para obtener y mostrar datos
