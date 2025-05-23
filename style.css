@@ -23,24 +23,31 @@
 
 body,
 html {
-  min-height: 100%;
-  font-family: "Roboto Mono", monospace;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  background: var(--color-background);
+  font-family: "Roboto Mono", monospace; /* Preserved */
+  background: var(--color-background); /* Preserved */
 }
 
 html {
-  overflow-x: hidden; /* Prevent horizontal scrollbars on html element too */
+  /* overflow-x: hidden; */ /* Removed */
 }
 
 body {
-  margin: 0;
-  align-items: center;
-  transform: scale(2.5);
-  transform-origin: top center;
-  overflow-x: hidden; /* Prevent horizontal scrollbars */
+  display: flex;
+  flex-direction: column; /* Stack children (modals) vertically */
+  align-items: center;    /* Center children horizontally */
+  justify-content: flex-start; /* Align children to the start of the vertical axis (top) */
+  min-height: 100vh;      /* Ensure body takes at least full viewport height */
+  margin: 0;              /* Remove default body margin, preserved */
+  padding: 20px 0;        /* Add some padding at the top/bottom for spacing */
+  box-sizing: border-box; /* Ensure padding doesn't add to total height for min-height:100vh */
+  /* transform: scale(2.5); removed */
+  /* transform-origin: top center; removed */
+  /* overflow-x: hidden; removed */
+  /* The original display:flex, justify-content:center, and flex-direction:column for body,html rule were for a different centering approach.
+     The new body rule with flexbox handles the centering of the modals now.
+     The font-family and background from the original body,html rule are preserved above.
+     The min-height:100% from body,html is effectively replaced by min-height:100vh on body.
+  */
 }
 
 /* Transitions will be applied selectively */
@@ -226,11 +233,11 @@ h3 {
   border: 1px solid var(--color-accent);
   background-color: #2be2a11f; /* This specific background could also be a variable */
   border-radius: 10px;
-  height: 64px;
+  min-height: 64px; /* Changed from height to min-height */
 }
 
 #data-status-modal {
-  height: 180px;
+  min-height: 180px; /* Changed from height to min-height */
 }
 
 #network-status-modal {
