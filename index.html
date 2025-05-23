@@ -1,97 +1,99 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  
-<meta http-equiv="Expires" content="0">
-<meta http-equiv="Last-Modified" content="0">
-<meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
-<meta http-equiv="Pragma" content="no-cache">
-
-<link rel='stylesheet'><link rel="stylesheet" href="./style.css?version=0">
-
+  <link rel='stylesheet' href="./style.css">
+  <title>Device Dashboard</title> <!-- Added a title -->
 </head>
-<body>
-<!-- partial:index.partial.html -->
-<div class="modal">
 
-<div class="opt toggled-off">
-     <div id="optc"><div id="RstAdb">Reset W-Adb</div><div id="ResetNet">Reset NetW</div><div id="Reboot">>Reiniciar<</div> </div>
-     <div class="header__opener-lever" id="h_o-l"></div>
+<body>
+  <!-- partial:index.partial.html -->
+  <div class="modal" id="cell-info-modal">
+    <div class="opt toggled-off">
+      <div id="optc">
+        <div id="RstAdb" role="button" tabindex="0">Reset W-Adb</div>
+        <div id="ResetNet" role="button" tabindex="0">Reset NetW</div>
+        <div id="Reboot" role="button" tabindex="0">&gt;Reiniciar&lt;</div>
+      </div>
+      <div class="header__opener-lever" id="h_o-l"></div>
     </div>
-    
-<div class="opt toggled-off">
-     <div id="optc2"><div id="phpfilem">Ver Archivos</div><div id="vncv">VNC View</div><div id="speedt">SpeedTest</div> </div>
-     <div class="header__opener-lever" id="h_o-l2"></div>
+
+    <div class="opt toggled-off">
+      <div id="optc2">
+        <div id="phpfilem" role="button" tabindex="0">Ver Archivos</div>
+        <div id="vncv" role="button" tabindex="0">VNC View</div>
+        <div id="speedt" role="button" tabindex="0">SpeedTest</div>
+      </div>
+      <div class="header__opener-lever" id="h_o-l2"></div>
     </div>
-    
+
     <div class="body">
       <div id="Cellnfo">Loading ...</div>
     </div>
-</div>
+  </div>
 
-
-<div class="modal">
+  <div class="modal" id="data-status-modal">
     <header>
-        <span class="buttons">
-            <ul>
-                <li><a href="#"></a></li>
-                <li><a href="#">+</a></li>
-                <li><a href="#"></a></li>
-            </ul>
-        </span>
-        <span class="title">Estado de Datos</span><span></span>
+      <span class="buttons">
+        <ul>
+          <li><a href="#"></a></li>
+          <li><a href="#">+</a></li>
+          <li><a href="#"></a></li>
+        </ul>
+      </span>
+      <span class="title">Estado de Datos</span>
+      <span></span> <!-- This span seems to be for styling/alignment purposes -->
     </header>
     <div class="body">
       <div id="rest">Loading ...</div>
-        <span class="arrow">></span>
-        <span class="dash">_</span>
+      <span class="arrow">&gt;</span>
+      <span class="dash">_</span>
     </div>
-</div>
+  </div>
 
-<div class="modal">
+  <div class="modal" id="network-status-modal">
     <header>
-        <span class="buttons">
-            <ul>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-            </ul>
-        </span>
-        <span class="title">Estado de Red</span><span></span>
+      <span class="buttons">
+        <ul>
+          <li><a href="#"></a></li>
+          <li><a href="#"></a></li>
+          <li><a href="#"></a></li>
+        </ul>
+      </span>
+      <span class="title">Estado de Red</span>
+      <span></span>
     </header>
     <div class="body">
       <div id="rest2">Loading ...</div>
       <div id="rest2a">Loading ...</div>
-        <span class="arrow">></span>
-        <span class="dash">_</span>
+      <span class="arrow">&gt;</span>
+      <span class="dash">_</span>
     </div>
-</div>
+  </div>
 
-<div class="modal">
+  <div class="modal" id="user-consumption-modal">
     <header>
-        <span class="buttons">
-            <ul>
-                <li><a href="#"></a></li>
-                <li><a href="#">+</a></li>
-                <li><a href="#"></a></li>
-            </ul>
-        </span>
-        <span class="title">Consumo x Usuario</span><span></span>
+      <span class="buttons">
+        <ul>
+          <li><a href="#"></a></li>
+          <li><a href="#">+</a></li>
+          <li><a href="#"></a></li>
+        </ul>
+      </span>
+      <span class="title">Consumo x Usuario</span>
+      <span></span>
     </header>
     <div class="body">
       <div id="rest3">Loading ...</div>
-        <span class="arrow">></span>
-        <span class="dash">_</span>
+      <span class="arrow">&gt;</span>
+      <span class="dash">_</span>
     </div>
-</div>
-<!-- partial -->
-  <script src='jquery.min.js'></script><script  src="./script.js?version=0"></script>
+  </div>
+  <!-- partial -->
+  <script src='jquery.min.js'></script>
+  <script src="./script.js"></script>
 
 </body>
+
 </html>
-
-
-
-
-
